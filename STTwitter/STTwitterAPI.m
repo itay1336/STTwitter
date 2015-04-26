@@ -2218,6 +2218,7 @@ authenticateInsteadOfAuthorize:authenticateInsteadOfAuthorize
                                                                            errorBlock:(void(^)(NSError *error))errorBlock {
     
     NSMutableDictionary *md = [NSMutableDictionary dictionary];
+    md[@"include_email"] = @"true";
     if(includeEntities) md[@"include_entities"] = [includeEntities boolValue] ? @"1" : @"0";
     if(skipStatus) md[@"skip_status"] = [skipStatus boolValue] ? @"1" : @"0";
     
